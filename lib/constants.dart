@@ -16,9 +16,9 @@ const kPrimarytextStyle = TextStyle(
 
 //Secondary font
 const kSecondaryTextStyle = TextStyle(
-    fontWeight: FontWeight.w900,
-    color: Colors.white,
-    fontSize: 13,
+    fontWeight: FontWeight.w600,
+    color: Colors.black,
+    fontSize: 30,
     fontStyle: FontStyle.normal);
 
 //Navigation textstyle
@@ -31,16 +31,16 @@ const kNavbarTextStyle = TextStyle(
 
 //Input text style
 const kReusableInputFormTextStyle = TextStyle(
-    fontWeight: FontWeight.w100,
+    fontWeight: FontWeight.w500,
     fontSize: 16,
-    color: Color(0xffFFC326),
+    color: Colors.white,
     fontStyle: FontStyle.normal);
 
 //Input text style
 const kSmallTextStyle = TextStyle(
-    fontWeight: FontWeight.w100,
+    fontWeight: FontWeight.w600,
     fontSize: 12,
-    color: Colors.white,
+    color: Colors.black,
     fontStyle: FontStyle.normal);
 
 String emailValidator(String value) {
@@ -72,17 +72,17 @@ String phoneValidator(String value) {
 
 //input decoration for forms
 const kloginDecoration = InputDecoration(
-  labelText: "Username",
-  labelStyle: TextStyle(color: Colors.white),
+  labelText: "Password",
+  labelStyle: TextStyle(color: Colors.black),
   enabledBorder: UnderlineInputBorder(
-    borderSide: BorderSide(color: Colors.white),
+    borderSide: BorderSide(color: Colors.black),
   ),
   focusedBorder: UnderlineInputBorder(
-    borderSide: BorderSide(color: Colors.white),
+    borderSide: BorderSide(color: Colors.black),
   ),
   // contentPadding: EdgeInsets.only(top: 40, bottom: 20),
   suffixIcon: Padding(
     padding: const EdgeInsetsDirectional.only(top: 18, start: 50),
-    child: Icon(Icons.chevron_right, color: Colors.white),
+    child: Icon(Icons.security, color: Colors.black),
   ),
 );

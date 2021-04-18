@@ -1,18 +1,33 @@
-import 'package:drone/bottom.dart';
-import 'package:drone/top.dart';
+import 'package:drone/screens/bottom.dart';
+import 'package:drone/screens/top.dart';
+import 'package:drone/widgets/journal_widget.dart';
+
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Welcome Uchenna'),
+        backgroundColor: Colors.lightBlueAccent,
+        elevation: 0,
+      ),
       backgroundColor: Colors.white,
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           showModalBottomSheet(
               context: context,
+              isScrollControlled: true,
+              backgroundColor: Colors.transparent,
               builder: (context) => Container(
-                    child: TopWidget(),
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(10.0),
+                          topRight: Radius.circular(10.0),
+                        )),
+                    child: JournallingScreen(),
                   ));
         },
         backgroundColor: Colors.lightBlueAccent,
@@ -32,7 +47,8 @@ class HomeScreen extends StatelessWidget {
                       bottomLeft: Radius.circular(20.0),
                       bottomRight: Radius.circular(20.0),
                     )),
-                child: SizedBox(
+                child: Container(
+                  child: TopWidget(),
                   width: double.infinity,
                 ),
               ),

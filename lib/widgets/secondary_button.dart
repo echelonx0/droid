@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'constants.dart';
 
-class ReusableButton extends StatelessWidget {
+class SecondaryReusableButton extends StatelessWidget {
   final title;
   final Function navigation;
 
-  const ReusableButton({Key key, this.title, this.navigation});
+  const SecondaryReusableButton({Key key, this.title, this.navigation});
 
   @override
   Widget build(BuildContext context) {
@@ -16,9 +15,7 @@ class ReusableButton extends StatelessWidget {
           Expanded(
             child: TextButton(
                 style: TextButton.styleFrom(
-                    primary: Colors.purple,
-                    // backgroundColor: kSecondaryHighlightColor,
-                    backgroundColor: Color(0xffdbf6e9),
+                    backgroundColor: Color(0xff7868e6),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10.0)),
                     textStyle:
@@ -30,7 +27,7 @@ class ReusableButton extends StatelessWidget {
                       title,
                       style: TextStyle(
                           fontWeight: FontWeight.w500,
-                          color: Color(0xff151515),
+                          color: Color(0xffdbf6e9),
                           fontSize: 18,
                           fontStyle: FontStyle.normal),
                       textAlign: TextAlign.center,

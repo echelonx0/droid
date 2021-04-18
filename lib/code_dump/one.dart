@@ -1,9 +1,9 @@
 import 'package:drone/reusable_button.dart';
 import 'package:flutter/material.dart';
 
-import 'constants.dart';
+import '../constants.dart';
 
-class BottomWidget extends StatelessWidget {
+class CodeDumpWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -104,7 +104,7 @@ class BottomWidget extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.only(top: 10.0),
                 child: ReusableButton(
-                  title: 'Pay Now',
+                  title: 'Do breathing execise Now',
                   navigation: () {},
                 ),
               ),
