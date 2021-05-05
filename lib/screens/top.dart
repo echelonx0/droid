@@ -1,13 +1,22 @@
 import 'package:drone/constants.dart';
-import 'package:drone/reusable_button.dart';
 import 'package:flutter/material.dart';
 
 class TopWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        //Add decoration with either gradient or image
-        //Ideally animated
+        // decoration: BoxDecoration(
+        //   gradient: LinearGradient(
+        //     begin: Alignment.topLeft,
+        //     end: Alignment(
+        //         0.8, 0.1), // 10% of the width, so there are ten blinds.
+        //     colors: [
+        //       const Color(0xff1cc5dc),
+        //       const Color(0xff00adb5)
+        //     ], // red to yellow
+        //     tileMode: TileMode.mirror, // repeats the gradient over the canvas
+        //   ),
+        // ),
         child: Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [

@@ -1,6 +1,7 @@
+import 'package:drone/constants.dart';
 import 'package:drone/screens/bottom.dart';
-import 'package:drone/screens/top.dart';
 import 'package:drone/widgets/journal_widget.dart';
+import 'package:drone/widgets/level.dart';
 
 import 'package:flutter/material.dart';
 
@@ -9,8 +10,11 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Welcome Uchenna'),
-        backgroundColor: Colors.lightBlueAccent,
+        title: Text(
+          'Welcome Uchenna',
+          style: kNavbarTextStyle,
+        ),
+        backgroundColor: Colors.white,
         elevation: 0,
       ),
       backgroundColor: Colors.white,
@@ -42,13 +46,12 @@ class HomeScreen extends StatelessWidget {
                 padding: EdgeInsets.symmetric(horizontal: 20.0),
                 height: 300.0,
                 decoration: BoxDecoration(
-                    color: Colors.lightBlueAccent,
                     borderRadius: BorderRadius.only(
-                      bottomLeft: Radius.circular(20.0),
-                      bottomRight: Radius.circular(20.0),
-                    )),
+                  bottomLeft: Radius.circular(20.0),
+                  bottomRight: Radius.circular(20.0),
+                )),
                 child: Container(
-                  child: TopWidget(),
+                  child: LevelWidget(),
                   width: double.infinity,
                 ),
               ),

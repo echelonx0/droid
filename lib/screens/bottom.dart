@@ -2,8 +2,6 @@ import 'package:drone/reusable_button.dart';
 import 'package:drone/widgets/secondary_button.dart';
 import 'package:flutter/material.dart';
 
-import '../constants.dart';
-
 class BottomWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

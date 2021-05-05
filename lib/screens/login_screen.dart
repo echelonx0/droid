@@ -1,7 +1,7 @@
+import 'package:drone/user_data/kyc.dart';
 import 'package:drone/widgets/text_formfield_widget.dart';
 import 'package:flutter/material.dart';
 import '../constants.dart';
-import 'home.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -132,7 +132,7 @@ class _LoginPageState extends State<LoginPage> {
                           Navigator.of(context).pushReplacement(
                               MaterialPageRoute(
                                   builder: (BuildContext context) =>
-                                      HomeScreen()));
+                                      TestingAnimations()));
                         },
                         child: Container(
                           padding: const EdgeInsets.symmetric(
