@@ -3,8 +3,10 @@ import 'package:flutter/material.dart';
 class SecondaryReusableButton extends StatelessWidget {
   final title;
   final Function navigation;
+  final Color buttonColor;
 
-  const SecondaryReusableButton({Key key, this.title, this.navigation});
+  const SecondaryReusableButton(
+      {Key key, this.title, this.navigation, this.buttonColor});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +17,8 @@ class SecondaryReusableButton extends StatelessWidget {
           Expanded(
             child: TextButton(
                 style: TextButton.styleFrom(
-                    backgroundColor: Color(0xff7868e6),
+                    backgroundColor:
+                        buttonColor != null ? buttonColor : Color(0xff7868e6),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10.0)),
                     textStyle:

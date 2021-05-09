@@ -24,6 +24,7 @@ class BottomWidget extends StatelessWidget {
             SecondaryReusableButton(
               title: 'Do a calming practice',
               navigation: () {},
+              buttonColor: Colors.redAccent,
             )
           ],
         )));

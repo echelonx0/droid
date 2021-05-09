@@ -7,6 +7,8 @@ class LevelWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //Bring in the box
+
     return Container(
       child: Column(
         children: [
@@ -93,14 +95,18 @@ class LevelWidget extends StatelessWidget {
                 RankWidget(
                   label: 'Novice',
                   imageLocation: 'images/notes.png',
+                  widgetColor: Color(0xff3d84b8),
                 ),
                 RankWidget(
                   label: 'Monk',
                   imageLocation: 'images/bg_3.png',
+                  widgetColor: Color(0xff344fa1),
                 ),
                 RankWidget(
                   label: 'Master',
                   imageLocation: 'images/icons8-trophy-64.png',
+                  // the color parameter
+                  widgetColor: Color(0xff3f3697),
                 )
               ],
             ),
@@ -114,7 +120,9 @@ class LevelWidget extends StatelessWidget {
 class RankWidget extends StatelessWidget {
   final String label;
   final String imageLocation;
-  const RankWidget({this.label, this.imageLocation});
+  //Passed in here
+  final Color widgetColor;
+  const RankWidget({this.label, this.imageLocation, this.widgetColor});
 
   @override
   Widget build(BuildContext context) {
@@ -125,7 +133,16 @@ class RankWidget extends StatelessWidget {
           height: 200,
           width: 150,
           decoration: BoxDecoration(
-              color: Color(0xff046582),
+              //And used here
+              color: widgetColor,
+              boxShadow: [
+                BoxShadow(
+                  color: Color(0xff3d84b8),
+                  spreadRadius: 1,
+                  blurRadius: 1,
+                  offset: Offset(3, 5), // changes position of shadow
+                ),
+              ],
               borderRadius: BorderRadius.all(
                 Radius.circular(10.0),
               )),
@@ -140,6 +157,62 @@ class RankWidget extends StatelessWidget {
                 padding: const EdgeInsets.all(8.0),
                 child: Text(
                   label,
+                  style: GoogleFonts.spartan(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w600,
+                    color: Color(0xffedffec),
+                  ),
+                ),
+              )
+            ],
+          ),
+        ),
+      ),
+      flex: 1,
+    );
+  }
+}
+
+class AwardsWidget extends StatelessWidget {
+  final String label;
+  final String imageLocation;
+  //Passed in here
+  final Color widgetColor;
+  const AwardsWidget({this.label, this.imageLocation, this.widgetColor});
+
+  @override
+  Widget build(BuildContext context) {
+    return Flexible(
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Container(
+          height: 200,
+          width: double.infinity,
+          decoration: BoxDecoration(
+              //And used here
+              color: widgetColor,
+              boxShadow: [
+                BoxShadow(
+                  color: Color(0xff3d84b8),
+                  spreadRadius: 1,
+                  blurRadius: 1,
+                  offset: Offset(3, 5), // changes position of shadow
+                ),
+              ],
+              borderRadius: BorderRadius.all(
+                Radius.circular(10.0),
+              )),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image(
+                image: AssetImage('images/icons8-trophy-64.png'),
+                width: 100,
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  'You are a novice. Use the app to earn higher badges',
                   style: GoogleFonts.spartan(
                     fontSize: 14,
                     fontWeight: FontWeight.w600,
