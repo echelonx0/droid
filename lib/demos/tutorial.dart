@@ -1,24 +1,27 @@
+import 'package:drone/utilities/activities_constants.dart';
 import 'package:flutter/material.dart';
 
-class Tutorial extends StatefulWidget {
-  @override
-  _TutorialState createState() => _TutorialState();
-}
+import 'activities_card.dart';
 
-class _TutorialState extends State<Tutorial> {
-  //This is a basic function
-  //We pass IN parameters AKA argument
-  void randomFunction(int audioFile) {}
+class TopicsList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        child: Center(
-      child: TextButton(
-        child: Text('Click Me'),
-        onPressed: () {
-          randomFunction(6);
+      height: 150.0,
+      child: ListView.separated(
+        separatorBuilder: (BuildContext context, int index) {
+          return SizedBox(
+            width: 15.0,
+          );
+        },
+        scrollDirection: Axis.horizontal,
+        itemCount: Constants.topics.length,
+        itemBuilder: (BuildContext context, int index) {
+          return TopicCard(
+            topic: Constants.topics[index],
+          );
         },
       ),
-    ));
+    );
   }
 }
