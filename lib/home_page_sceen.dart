@@ -8,8 +8,6 @@ import 'common/constants.dart';
 import 'custom_widgets/graph_card_widget.dart';
 
 class HomePageScreen extends StatefulWidget {
-  HomePageScreen({Key key}) : super(key: key);
-
   @override
   _HomePageScreenState createState() => _HomePageScreenState();
 }
